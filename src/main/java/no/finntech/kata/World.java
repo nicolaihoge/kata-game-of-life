@@ -9,8 +9,8 @@ public final class World {
                 int liveNeighbours = livingNeigbours(x, y, current);
                 if (liveNeighbours < 2) {
                     nextGeneration[x][y] = false;
-                } if (liveNeighbours == 2 || liveNeighbours == 3) {
-                    nextGeneration[x][y] = true;
+                } if (living(x, y, current) && (liveNeighbours == 2 || liveNeighbours == 3)) {
+                    nextGeneration[y][x] = true;
                 }
             }
         }
