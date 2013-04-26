@@ -51,8 +51,23 @@ public class WorldTest {
 
         boolean[][] expected = new boolean[][] {
                 {true, true, false},
-                {true, false, false},
+                {false, false, false},
                 {true, false, false}};
+        assertThat(new World().nextGeneration(board)).isEqualTo(expected);
+
+    }
+
+    @Test
+    public void anyDeadCellWithThreeNeighboursShuldBecomeLiving() {
+        boolean[][] board = new boolean[][] {
+                {false, true, false},
+                {true, false,  true},
+                {false, false, false}};
+
+        boolean[][] expected = new boolean[][] {
+                {false, false, false},
+                {false, true, false},
+                {false, false, false}};
         assertThat(new World().nextGeneration(board)).isEqualTo(expected);
 
     }
