@@ -36,7 +36,7 @@ public class WorldTest {
 
         boolean[][] expected = new boolean[][] {
                 {true, true, false},
-                {true, false, false},
+                {true, true, false},
                 {false, false, false}};
         assertThat(new World().nextGeneration(board)).isEqualTo(expected);
 
@@ -52,7 +52,7 @@ public class WorldTest {
         boolean[][] expected = new boolean[][] {
                 {true, true, false},
                 {false, false, false},
-                {true, false, false}};
+                {true, true, false}};
         assertThat(new World().nextGeneration(board)).isEqualTo(expected);
 
     }

@@ -6,15 +6,15 @@ public final class World {
         boolean[][] nextGeneration = new boolean[current.length][current[0].length];
         for (int y = 0; y < current.length; y++) {
             for (int x = 0; x < current[0].length; x++) {
-                int liveNeighbours = livingNeigbours(x, y, current);
+                int liveNeighbours = livingNeigbours(y, x, current);
                 if (liveNeighbours < 2) {
-                    nextGeneration[x][y] = false;
-                } else if (living(x, y, current) && (liveNeighbours == 2 || liveNeighbours == 3)) {
-                    nextGeneration[x][y] = true;
-                } else if (living(x, y, current) && (liveNeighbours > 3)) {
-                    nextGeneration[x][y] = false;
-                } else if (!living(x, y, current) && liveNeighbours == 3) {
-                    nextGeneration[x][y] = true;
+                    nextGeneration[y][x] = false;
+                } else if (living(y, x, current) && (liveNeighbours == 2 || liveNeighbours == 3)) {
+                    nextGeneration[y][x] = true;
+                } else if (living(y, x, current) && (liveNeighbours > 3)) {
+                    nextGeneration[y][x] = false;
+                } else if (!living(y, x, current) && liveNeighbours == 3) {
+                    nextGeneration[y][x] = true;
                 }
             }
         }
