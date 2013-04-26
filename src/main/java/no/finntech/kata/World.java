@@ -13,6 +13,8 @@ public final class World {
                     nextGeneration[x][y] = true;
                 } else if (living(x, y, current) && (liveNeighbours > 3)) {
                     nextGeneration[x][y] = false;
+                } else if (!living(x, y, current) && liveNeighbours == 3) {
+                    nextGeneration[x][y] = true;
                 }
             }
         }

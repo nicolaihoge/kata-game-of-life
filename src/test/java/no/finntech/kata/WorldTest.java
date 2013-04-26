@@ -65,7 +65,7 @@ public class WorldTest {
                 {false, false, false}};
 
         boolean[][] expected = new boolean[][] {
-                {false, false, false},
+                {false, true, false},
                 {false, true, false},
                 {false, false, false}};
         assertThat(new World().nextGeneration(board)).isEqualTo(expected);
