@@ -71,4 +71,18 @@ public class WorldTest {
         assertThat(new World().nextGeneration(board)).isEqualTo(expected);
 
     }
+
+    @Test
+    public void differentNumberOfRowsAndCollums() {
+        boolean[][] board = new boolean[][] {
+                {false, true, false},
+                {true, false,  true}};
+
+        boolean[][] expected = new boolean[][] {
+                {false, true, false},
+                {false, true, false}};
+        assertThat(new World().nextGeneration(board)).isEqualTo(expected);
+
+    }
+
 }
