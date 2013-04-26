@@ -26,4 +26,19 @@ public class WorldTest {
         assertThat(new World().nextGeneration(board)).isEqualTo(expected);
 
     }
+
+    @Test
+    public void anyLiveCellWithTwoOrThreeLiveNeighboursLivesOnToTheNextGeneration () {
+        boolean[][] board = new boolean[][] {
+                {true, true, false},
+                {true, false,  false},
+                {false, false, false}};
+
+        boolean[][] expected = new boolean[][] {
+                {true, true, false},
+                {true, false, false},
+                {false, false, false}};
+        assertThat(new World().nextGeneration(board)).isEqualTo(expected);
+
+    }
 }
