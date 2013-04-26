@@ -1,4 +1,8 @@
 package no.finntech.kata;
 
-public class World {
+public final class World {
+
+    public boolean[][] nextGeneration(boolean[][] current) {
+        return new boolean[][] {};
+    }
 }
