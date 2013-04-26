@@ -31,7 +31,6 @@ public final class World {
         if (living(x+1, y-1, current)) result++;
         if (living(x+1, y, current)) result++;
         if (living(x+1, y+1, current)) result++;
-        System.out.println(x + ":" + y + " : neighbours : " + result);
         return result;
     }
 
